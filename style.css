@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,400i|Raleway:400,600&display=swap");
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  font-size: 0.875rem;
+  margin: 3rem  2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+  color: #6AAdEE;
+  text-decoration: underline;
+}
+
+.l-main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+      grid-template-areas: 'secondary primary';
+}
+
+.l-primary {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: primary;
+}
+
+.l-primary > * {
+  border-bottom: 2px solid #6AAdEE;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.l-secondary {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: secondary;
+}
+
+.l-secondary > * {
+  border-bottom: 2px solid #6AAdEE;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.l-secondary > *:first-child {
+  border-top: 2px solid #6AAdEE;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.u-header {
+  margin-bottom: 1.5rem;
+}
+
+.u-title,
+.u-subtitle {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.03rem;
+  text-align: center;
+}
+
+.u-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.u-subtitle {
+  font-size: 1.25rem;
+}
+
+.u-heading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+.u-content {
+  padding-left: 0.5rem;
+}
+
+.u-list li {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.u-list li:last-child {
+  margin-bottom: 0;
+}
+
+.u-list--highlighted {
+  margin-left: -0.5rem;
+  padding-left: 1.5rem;
+}
+
+.u-list--highlighted li {
+  position: relative;
+}
+
+.u-list--highlighted li:before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background-size: 100% 100%;
+  margin-right: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: -1.5rem;
+}
+
+.u-list .u-sublist {
+  margin-top: 0.5rem;
+}
+
+.u-list .u-sublist ul {
+  margin-top: 0.25rem;
+  padding-left: 0.5rem;
+}
+
+.u-list .u-sublist ul li {
+  margin-bottom: 0;
+}
+
+.u-portfolio:before {
+  background-image: url("/images/portfolio-icon.svg");
+}
+
+.u-github:before {
+  background-image: url("/images/github-icon.svg");
+}
+
+.u-email:before {
+  background-image: url("/images/email-icon.svg");
+}
+
+.u-phone:before {
+  background-image: url("/images/phone-icon.svg");
+}
+
+.u-music:before {
+  background-image: url("/images/music-icon.svg");
+}
+
+.u-fitness:before {
+  background-image: url("/images/fitness-icon.svg");
+}
+
+.u-footer {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
