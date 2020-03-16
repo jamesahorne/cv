@@ -2,11 +2,16 @@
 
 $colour-primary-light: #6AAdEE;
 $colour-primary: #0163C1;
+$colour-black-light: #757575;
 $colour-black: #333333;
 $border: 2px solid $colour-primary-light;
 $font-size-xs: 0.75rem;
 $font-size-sm: 0.875rem;
-$font-size-normal: 1rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 2.5rem;
+$line-height-sm: 1.2;
+$line-height-md: 1.5;
 
 @mixin border($alignment) {
   border-#{$alignment}: $border;
@@ -20,13 +25,14 @@ $font-size-normal: 1rem;
 
 //                      General & Reset
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i|Raleway:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i|Raleway:400,500,600&display=swap');
 
 body {
   font-family: 'Montserrat', sans-serif;
   color: $colour-black;
-  font-size: 0.875rem;
-  margin: 3rem  2rem;
+  font-size: $font-size-sm;
+  line-height: $line-height-md;
+  margin: 3rem 2rem 2rem;
 }
 
 * {
@@ -37,12 +43,12 @@ body {
 
 a {
   color: $colour-black;
-  text-decoration: none;
+  text-decoration: underline transparent;
+  transition: ease-in-out 0.15s;
   &:hover,
   &:focus,
   &:active {
-    color: $colour-primary;
-    text-decoration: underline;
+    color: $colour-black-light;
   }
 }
 
@@ -61,16 +67,21 @@ a {
   grid-area: primary;
   > * {
     @include border(bottom);
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
 .l-secondary {
   grid-area: secondary;
-  font-size: $font-size-xs;
   > * {
     @include border(bottom);
     &:first-child {
       @include border(top);
+    }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
@@ -83,34 +94,45 @@ a {
 
 .u-title,
 .u-subtitle {
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.03rem;
   text-align: center;
+  line-height: $line-height-sm;
 }
 
 .u-title {
-  font-size: 2.5rem;
-  margin-bottom: 0.75rem;
+  font-weight: 300;
+  font-size: $font-size-xl;
+  margin-bottom: 0.25rem;
 }
 
 .u-subtitle {
-  font-size: 1.25rem;
+  font-size: $font-size-lg;
+  color: $colour-black-light;
 }
 
 .u-heading {
   font-family: 'Raleway', sans-serif;
-  font-size: 1rem;
+  font-size: $font-size-md;
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.625rem;
   color: $colour-primary;
+  line-height: $line-height-sm;
 }
 
 .u-subheading {
   font-family: 'Raleway', sans-serif;
-  font-size: 1rem;
+  font-size: $font-size-md;
+  font-weight: 500;
+  line-height: $line-height-sm;
+}
+
+.u-subheading-2 {
+  font-size: $font-size-xs;
   font-weight: 400;
-  margin-bottom: 0.25rem;
+  color: $colour-black-light;
+  margin-bottom: 0.375rem;
 }
 
 .u-content {
@@ -120,12 +142,12 @@ a {
 .u-list {
   li {
     display: block;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.375rem;
     &:last-child {
       margin-bottom: 0;
     }
   }
-  &--highlighted {
+  &--icons {
     margin-left: -0.5rem;
     padding-left: 1.5rem;
     li {
@@ -145,6 +167,24 @@ a {
   }
   &--skills {
     column-count: 2;
+  }
+  &--bullets {
+    margin-top: 0.25rem;
+    li {
+      position: relative;
+      padding-left: 1.25rem;
+      &:before {
+        content: "\2022";
+        color: $colour-primary;
+        font-weight: bold;
+        font-size: $font-size-md;
+        display: inline-block;
+        width: 1rem;
+        position: absolute;
+        top: 0;
+        left: 0.25rem;
+      }
+    }
   }
 
   .u-sublist {
@@ -200,22 +240,40 @@ a {
   }
 }
 
-.u-date {
-  font-size: $font-size-xs;
-  &:before {
-    content: '';
-    display: inline-block;
-    background-image: url('/images/icon-date.svg');
-    background-size: 100% 100%;
-    width: 14px;
-    height: 14px;
-    margin-right: 0.5rem;
+.u-experience-block {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  &:after {
+    content: "";
+    display: block;
     position: relative;
-    top: 2px;
-    left: 0;
+    bottom: -1rem;
+    left: calc((100% - 50px) / 2);
+    height: 1px;
+    width: 50px;
+    border-bottom: $border;
+  }
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    &:after {
+      content: none;
+    }
   }
 }
 
+.u-date {
+  font-size: $font-size-xs;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  float: right;
+}
+
 .u-footer {
+  margin-top: 1.5rem;
   text-align: center;
+}
+
+.u-link {
+  text-decoration: underline $colour-primary-light;
 }

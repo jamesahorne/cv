@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,400i|Raleway:400,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,400i|Raleway:400,500,600&display=swap");
 body {
   font-family: 'Montserrat', sans-serif;
   color: #333333;
   font-size: 0.875rem;
-  margin: 3rem  2rem;
+  line-height: 1.5;
+  margin: 3rem 2rem 2rem;
 }
 
 * {
@@ -15,12 +16,14 @@ body {
 
 a {
   color: #333333;
-  text-decoration: none;
+  -webkit-text-decoration: underline transparent;
+          text-decoration: underline transparent;
+  -webkit-transition: ease-in-out 0.15s;
+  transition: ease-in-out 0.15s;
 }
 
 a:hover, a:focus, a:active {
-  color: #0163C1;
-  text-decoration: underline;
+  color: #757575;
 }
 
 .l-main {
@@ -45,11 +48,14 @@ a:hover, a:focus, a:active {
   padding-bottom: 1rem;
 }
 
+.l-primary > *:last-child {
+  margin-bottom: 0;
+}
+
 .l-secondary {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: secondary;
-  font-size: 0.75rem;
 }
 
 .l-secondary > * {
@@ -64,40 +70,55 @@ a:hover, a:focus, a:active {
   padding-top: 1rem;
 }
 
+.l-secondary > *:last-child {
+  margin-bottom: 0;
+}
+
 .u-header {
   margin-bottom: 1.5rem;
 }
 
 .u-title,
 .u-subtitle {
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.03rem;
   text-align: center;
+  line-height: 1.2;
 }
 
 .u-title {
+  font-weight: 300;
   font-size: 2.5rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.25rem;
 }
 
 .u-subtitle {
   font-size: 1.25rem;
+  color: #757575;
 }
 
 .u-heading {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.625rem;
   color: #0163C1;
+  line-height: 1.2;
 }
 
 .u-subheading {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.u-subheading-2 {
+  font-size: 0.75rem;
   font-weight: 400;
-  margin-bottom: 0.25rem;
+  color: #757575;
+  margin-bottom: 0.375rem;
 }
 
 .u-content {
@@ -106,23 +127,23 @@ a:hover, a:focus, a:active {
 
 .u-list li {
   display: block;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.375rem;
 }
 
 .u-list li:last-child {
   margin-bottom: 0;
 }
 
-.u-list--highlighted {
+.u-list--icons {
   margin-left: -0.5rem;
   padding-left: 1.5rem;
 }
 
-.u-list--highlighted li {
+.u-list--icons li {
   position: relative;
 }
 
-.u-list--highlighted li:before {
+.u-list--icons li:before {
   content: '';
   width: 14px;
   height: 14px;
@@ -137,6 +158,27 @@ a:hover, a:focus, a:active {
 .u-list--skills {
   -webkit-column-count: 2;
           column-count: 2;
+}
+
+.u-list--bullets {
+  margin-top: 0.25rem;
+}
+
+.u-list--bullets li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.u-list--bullets li:before {
+  content: "\2022";
+  color: #0163C1;
+  font-weight: bold;
+  font-size: 1rem;
+  display: inline-block;
+  width: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0.25rem;
 }
 
 .u-list .u-sublist {
@@ -181,24 +223,45 @@ a:hover, a:focus, a:active {
   background-image: url("/images/icon-fitness.svg");
 }
 
-.u-date {
-  font-size: 0.75rem;
+.u-experience-block {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
-.u-date:before {
-  content: '';
-  display: inline-block;
-  background-image: url("/images/icon-date.svg");
-  background-size: 100% 100%;
-  width: 14px;
-  height: 14px;
-  margin-right: 0.5rem;
+.u-experience-block:after {
+  content: "";
+  display: block;
   position: relative;
-  top: 2px;
-  left: 0;
+  bottom: -1rem;
+  left: calc((100% - 50px) / 2);
+  height: 1px;
+  width: 50px;
+  border-bottom: 2px solid #6AAdEE;
+}
+
+.u-experience-block:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.u-experience-block:last-child:after {
+  content: none;
+}
+
+.u-date {
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  float: right;
 }
 
 .u-footer {
+  margin-top: 1.5rem;
   text-align: center;
+}
+
+.u-link {
+  -webkit-text-decoration: underline #6AAdEE;
+          text-decoration: underline #6AAdEE;
 }
 /*# sourceMappingURL=style.css.map */
