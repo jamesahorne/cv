@@ -60,7 +60,7 @@ a:hover, a:focus, a:active {
 
 .l-secondary > *:first-child {
   border-top: 2px solid #6AAdEE;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   padding-top: 1rem;
 }
 
@@ -91,6 +91,13 @@ a:hover, a:focus, a:active {
   font-weight: 600;
   margin-bottom: 0.25rem;
   color: #0163C1;
+}
+
+.u-subheading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
 }
 
 .u-content {
@@ -151,27 +158,44 @@ a:hover, a:focus, a:active {
 }
 
 .u-portfolio:before {
-  background-image: url("/images/portfolio-icon.svg");
+  background-image: url("/images/icon-portfolio.svg");
 }
 
 .u-github:before {
-  background-image: url("/images/github-icon.svg");
+  background-image: url("/images/icon-github.svg");
 }
 
 .u-email:before {
-  background-image: url("/images/email-icon.svg");
+  background-image: url("/images/icon-email.svg");
 }
 
 .u-phone:before {
-  background-image: url("/images/phone-icon.svg");
+  background-image: url("/images/icon-phone.svg");
 }
 
 .u-music:before {
-  background-image: url("/images/music-icon.svg");
+  background-image: url("/images/icon-music.svg");
 }
 
 .u-fitness:before {
-  background-image: url("/images/fitness-icon.svg");
+  background-image: url("/images/icon-fitness.svg");
+}
+
+.u-date {
+  font-size: 0.75rem;
+}
+
+.u-date:before {
+  content: '';
+  display: inline-block;
+  background-image: url("/images/icon-date.svg");
+  background-size: 100% 100%;
+  width: 14px;
+  height: 14px;
+  margin-right: 0.5rem;
+  position: relative;
+  top: 2px;
+  left: 0;
 }
 
 .u-footer {

@@ -10,7 +10,11 @@ $font-size-normal: 1rem;
 
 @mixin border($alignment) {
   border-#{$alignment}: $border;
-  margin-#{$alignment}: 1rem;
+  @if $alignment == 'top' {
+    margin-#{$alignment}: 0.5rem;
+  } @else {
+    margin-#{$alignment}: 1rem;
+  }
   padding-#{$alignment}: 1rem;
 }
 
@@ -102,6 +106,13 @@ a {
   color: $colour-primary;
 }
 
+.u-subheading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
 .u-content {
   padding-left: 0.5rem;
 }
@@ -155,42 +166,56 @@ a {
 
 .u-portfolio {
   &:before {
-    background-image: url('/images/portfolio-icon.svg');
+    background-image: url('/images/icon-portfolio.svg');
   }
 }
 
 .u-github {
   &:before {
-    background-image: url('/images/github-icon.svg');
+    background-image: url('/images/icon-github.svg');
   }
 }
 
 .u-email {
   &:before {
-    background-image: url('/images/email-icon.svg');
+    background-image: url('/images/icon-email.svg');
   }
 }
 
 .u-phone {
   &:before {
-    background-image: url('/images/phone-icon.svg');
+    background-image: url('/images/icon-phone.svg');
   }
 }
 
 .u-music {
   &:before {
-    background-image: url('/images/music-icon.svg');
+    background-image: url('/images/icon-music.svg');
   }
 }
 
 .u-fitness {
   &:before {
-    background-image: url('/images/fitness-icon.svg');
+    background-image: url('/images/icon-fitness.svg');
+  }
+}
+
+.u-date {
+  font-size: $font-size-xs;
+  &:before {
+    content: '';
+    display: inline-block;
+    background-image: url('/images/icon-date.svg');
+    background-size: 100% 100%;
+    width: 14px;
+    height: 14px;
+    margin-right: 0.5rem;
+    position: relative;
+    top: 2px;
+    left: 0;
   }
 }
 
 .u-footer {
   text-align: center;
 }
-
-
