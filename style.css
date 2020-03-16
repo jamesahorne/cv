@@ -49,6 +49,7 @@ a:hover, a:focus, a:active {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: secondary;
+  font-size: 0.75rem;
 }
 
 .l-secondary > * {
@@ -87,8 +88,9 @@ a:hover, a:focus, a:active {
 .u-heading {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 0.25rem;
+  color: #0163C1;
 }
 
 .u-content {
@@ -98,7 +100,6 @@ a:hover, a:focus, a:active {
 .u-list li {
   display: block;
   margin-bottom: 0.25rem;
-  font-size: 0.75rem;
 }
 
 .u-list li:last-child {
@@ -124,6 +125,11 @@ a:hover, a:focus, a:active {
   position: absolute;
   top: 0;
   left: -1.5rem;
+}
+
+.u-list--skills {
+  -webkit-column-count: 2;
+          column-count: 2;
 }
 
 .u-list .u-sublist {

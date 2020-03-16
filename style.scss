@@ -132,6 +132,9 @@ a {
       }
     }
   }
+  &--skills {
+    column-count: 2;
+  }
 
   .u-sublist {
     margin-top: 0.5rem;
