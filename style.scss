@@ -1,9 +1,9 @@
 //                      Mixins & Variables
 
-$colour-primary: #6AAdEE;
-$colour-primary-dark: #0163C1;
+$colour-primary-light: #6AAdEE;
+$colour-primary: #0163C1;
 $colour-black: #333333;
-$border: 2px solid $colour-primary;
+$border: 2px solid $colour-primary-light;
 $font-size-xs: 0.75rem;
 $font-size-sm: 0.875rem;
 $font-size-normal: 1rem;
@@ -99,7 +99,7 @@ a {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
-  color: $colour-primary-dark;
+  color: $colour-primary;
 }
 
 .u-content {
@@ -146,6 +146,11 @@ a {
       }
     }
   }
+}
+
+.u-star {
+  color: $colour-primary;
+  float: right;
 }
 
 .u-portfolio {

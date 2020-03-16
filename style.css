@@ -19,7 +19,7 @@ a {
 }
 
 a:hover, a:focus, a:active {
-  color: #6AAdEE;
+  color: #0163C1;
   text-decoration: underline;
 }
 
@@ -143,6 +143,11 @@ a:hover, a:focus, a:active {
 
 .u-list .u-sublist ul li {
   margin-bottom: 0;
+}
+
+.u-star {
+  color: #0163C1;
+  float: right;
 }
 
 .u-portfolio:before {
