@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,400i|Raleway:400,500,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400|Raleway:500,600&display=swap");
 body {
   font-family: 'Montserrat', sans-serif;
   color: #333333;
   font-size: 0.875rem;
   line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   margin: 3rem 2rem 2rem;
 }
 
@@ -23,7 +25,7 @@ a {
 }
 
 a:hover, a:focus, a:active {
-  color: #757575;
+  color: #858585;
 }
 
 .l-main {
@@ -43,7 +45,7 @@ a:hover, a:focus, a:active {
 }
 
 .l-primary > * {
-  border-bottom: 2px solid #6AAdEE;
+  border-bottom: 2px solid #5584F6;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
 }
@@ -59,13 +61,13 @@ a:hover, a:focus, a:active {
 }
 
 .l-secondary > * {
-  border-bottom: 2px solid #6AAdEE;
+  border-bottom: 2px solid #5584F6;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
 }
 
 .l-secondary > *:first-child {
-  border-top: 2px solid #6AAdEE;
+  border-top: 2px solid #5584F6;
   margin-top: 0.5rem;
   padding-top: 1rem;
 }
@@ -95,7 +97,7 @@ a:hover, a:focus, a:active {
 
 .u-subtitle {
   font-size: 1.25rem;
-  color: #757575;
+  color: #858585;
 }
 
 .u-heading {
@@ -103,7 +105,7 @@ a:hover, a:focus, a:active {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #0163C1;
+  color: #2765f5;
   line-height: 1.2;
 }
 
@@ -117,7 +119,7 @@ a:hover, a:focus, a:active {
 .u-subheading-2 {
   font-size: 0.75rem;
   font-weight: 400;
-  color: #757575;
+  color: #858585;
   margin-bottom: 0.375rem;
 }
 
@@ -151,7 +153,7 @@ a:hover, a:focus, a:active {
   background-size: 100% 100%;
   margin-right: 0.5rem;
   position: absolute;
-  top: 0;
+  top: 3px;
   left: -1.5rem;
 }
 
@@ -171,7 +173,7 @@ a:hover, a:focus, a:active {
 
 .u-list--bullets li:before {
   content: "\2022";
-  color: #0163C1;
+  color: #5584F6;
   font-weight: bold;
   font-size: 1rem;
   display: inline-block;
@@ -195,7 +197,7 @@ a:hover, a:focus, a:active {
 }
 
 .u-star {
-  color: #0163C1;
+  color: #5584F6;
   float: right;
 }
 
@@ -236,7 +238,7 @@ a:hover, a:focus, a:active {
   left: calc((100% - 50px) / 2);
   height: 1px;
   width: 50px;
-  border-bottom: 2px solid #6AAdEE;
+  border-bottom: 2px solid #5584F6;
 }
 
 .u-experience-block:last-child {
@@ -261,7 +263,7 @@ a:hover, a:focus, a:active {
 }
 
 .u-link {
-  -webkit-text-decoration: underline #6AAdEE;
-          text-decoration: underline #6AAdEE;
+  -webkit-text-decoration: underline #5584F6;
+          text-decoration: underline #5584F6;
 }
 /*# sourceMappingURL=style.css.map */

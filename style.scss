@@ -1,8 +1,8 @@
 //                      Mixins & Variables
 
-$colour-primary-light: #6AAdEE;
-$colour-primary: #0163C1;
-$colour-black-light: #757575;
+$colour-primary-light: #5584F6;
+$colour-primary: #2765f5;
+$colour-black-light: #858585;
 $colour-black: #333333;
 $border: 2px solid $colour-primary-light;
 $font-size-xs: 0.75rem;
@@ -25,13 +25,15 @@ $line-height-md: 1.5;
 
 //                      General & Reset
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i|Raleway:400,500,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Raleway:500,600&display=swap');
 
 body {
   font-family: 'Montserrat', sans-serif;
   color: $colour-black;
   font-size: $font-size-sm;
   line-height: $line-height-md;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   margin: 3rem 2rem 2rem;
 }
 
@@ -160,7 +162,7 @@ a {
         background-size: 100% 100%;
         margin-right: 0.5rem;
         position: absolute;
-        top: 0;
+        top: 3px;
         left: -1.5rem;
       }
     }
@@ -175,7 +177,7 @@ a {
       padding-left: 1.25rem;
       &:before {
         content: "\2022";
-        color: $colour-primary;
+        color: $colour-primary-light;
         font-weight: bold;
         font-size: $font-size-md;
         display: inline-block;
@@ -200,7 +202,7 @@ a {
 }
 
 .u-star {
-  color: $colour-primary;
+  color: $colour-primary-light;
   float: right;
 }
 
