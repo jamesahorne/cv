@@ -171,6 +171,8 @@ body {
   margin: auto;
   width: $cv-width;
   height: $cv-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .cv__header {
