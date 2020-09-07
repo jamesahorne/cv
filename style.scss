@@ -1,19 +1,11 @@
 //            Colours            //
 
-
-
 $colour-black-400: hsl(0, 0%, 38.75%);
 $colour-black-500: hsl(0, 0%, 20%);
 $colour-primary-400: hsl(222, 90%, 65%);
 $colour-primary-500: hsl(222, 90%, 55%);
 
-
-
-
-
 //            Variables            //
-
-
 
 $sm: 36;
 $md: 48;
@@ -41,36 +33,23 @@ $cv-fs-lg: 1.25rem;
 $cv-fs-xl: 1.75rem;
 $cv-fs-xxl: 2.5rem;
 
-
-
-
-
-
 //            Fonts            //
 
-
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Raleway:wght@500;600&display=swap');
-
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Raleway:wght@500;600&display=swap");
 
 //            Mixins            //
 
-
-
 @mixin font-primary {
-  font-family: 'Montserrat', sans-serif, Arial;
+  font-family: "Montserrat", sans-serif, Arial;
 }
 
 @mixin font-secondary {
-  font-family: 'Raleway', sans-serif, Arial;
+  font-family: "Raleway", sans-serif, Arial;
 }
 
 @mixin cv-border($alignment) {
   border-#{$alignment}: $cv-border;
-  @if $alignment == 'top' {
+  @if $alignment == "top" {
     margin-#{$alignment}: 0.5rem;
   } @else {
     margin-#{$alignment}: 1rem;
@@ -79,88 +58,82 @@ $cv-fs-xxl: 2.5rem;
 }
 
 @mixin u-link {
-	display: inline-flex;
-	color: $colour-black-500;
-	position: relative;
-	overflow: hidden;
-	&:hover,
-	&:focus,
-	&:active {
-		color: $colour-primary-500;
-		&:after {
-			transform: translateX(-105%);
-		}
-	}
-	&:after {
-		content: "";
-		width: 100%;
-		height: 2px;
-		background-color: $colour-primary-400;
-		border-radius: $border-radius;
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		transform: translateX(0);
-	}
+  display: inline-flex;
+  color: $colour-black-500;
+  position: relative;
+  overflow: hidden;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $colour-primary-500;
+    &:after {
+      transform: translateX(-105%);
+    }
+  }
+  &:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: $colour-primary-400;
+    border-radius: $border-radius;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateX(0);
+  }
 }
-
-
-
-
 
 //            Reset            //
 
-
-
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body, h1, h2, h3, h4, h5, p, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul {
   margin: 0;
 }
 
 ul {
-	padding: 0;
+  padding: 0;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
   color: $colour-black-500;
-	&:visited {
-		color: $colour-black-500;
-	}
+  &:visited {
+    color: $colour-black-500;
+  }
 }
 
 li {
-	display: block;
+  display: block;
 }
-
-
-
-
 
 // Main CSS
 
-
-
 .u-link {
-	@include u-link;
-	&--cv {
+  @include u-link;
+  &--cv {
     &:hover,
     &:focus,
     &:active {
-			color: $colour-black-500;
+      color: $colour-black-500;
       &:after {
         transform: translateX(0);
       }
     }
     &:after {
       transform: translateX(100%);
-		}
-	}
+    }
+  }
 }
-
 
 body {
   @include font-primary;
@@ -203,9 +176,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 2rem;
-  grid-template-areas:
-    'secondary primary'
-  ;
+  grid-template-areas: "secondary primary";
 }
 
 .cv__primary {
@@ -268,7 +239,7 @@ body {
     li {
       position: relative;
       &:before {
-        content: '';
+        content: "";
         width: 14px;
         height: 14px;
         display: inline-block;
@@ -332,31 +303,31 @@ body {
 
 .cv__portfolio {
   &:before {
-    background-image: url('../images/icon-portfolio.svg');
+    background-image: url("../images/icon-portfolio.svg");
   }
 }
 
 .cv__linked-in {
   &:before {
-    background-image: url('../images/icon-linked-in.svg');
+    background-image: url("../images/icon-linked-in.svg");
   }
 }
 
 .cv__github {
   &:before {
-    background-image: url('../images/icon-github.svg');
+    background-image: url("../images/icon-github.svg");
   }
 }
 
 .cv__email {
   &:before {
-    background-image: url('../images/icon-email.svg');
+    background-image: url("../images/icon-email.svg");
   }
 }
 
 .cv__phone {
   &:before {
-    background-image: url('../images/icon-phone.svg');
+    background-image: url("../images/icon-phone.svg");
   }
 }
 
@@ -390,5 +361,5 @@ body {
 
 .cv__footer {
   text-align: center;
-  padding-top: 2rem;
+  padding: 2rem 0;
 }
