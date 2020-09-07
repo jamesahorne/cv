@@ -79,6 +79,8 @@ body {
   margin: auto;
   width: 39.375rem;
   height: 55.6875rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .cv__header {
